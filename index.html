@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nightwind.ai | Airgapped AI Document Intelligence</title>
+  <meta name="description" content="Airgapped AI document intelligence for defence, intelligence, and national security organisations. On-premise deployment. No cloud dependency. Fully sovereign.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="nightwind.ai | Airgapped AI Document Intelligence">
+  <meta property="og:description" content="Query decades of unstructured intelligence archives using natural language. Deployed on-premise. No cloud dependency. Fully sovereign.">
+  <meta property="og:url" content="https://nightwind.ai">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://nightwind.ai/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="nightwind.ai | Airgapped AI Document Intelligence">
+  <meta name="twitter:description" content="Airgapped AI document intelligence for defence and national security.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind v4 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style type="text/tailwindcss">
+    @theme {
+      --color-midnight: #0A0E17;
+      --color-dark-steel: #111827;
+      --color-slate-border: #1E293B;
+      --color-signal-green: #00FF88;
+      --color-phosphor-amber: #F59E0B;
+      --color-text-primary: #F8FAFC;
+      --color-text-secondary: #94A3B8;
+      --color-text-muted: #475569;
+      --font-sans: 'Inter', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+  </style>
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* Tactical grid background */
+    .tactical-grid {
+      background-color: #0A0E17;
+      background-image:
+        linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* Radar sweep behind hero */
+    .radar-sweep {
+      position: relative;
+    }
+    .radar-sweep::before {
+      content: '';
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: conic-gradient(from 0deg, transparent 0deg, rgba(0, 255, 136, 0.06) 30deg, transparent 60deg);
+      animation: sweep 8s linear infinite;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    @keyframes sweep {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* Blinking cursor */
+    .cursor-blink::after {
+      content: '_';
+      color: #00FF88;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    /* Blinking .ai wordmark */
+    .ai-blink {
+      animation: blink 1s step-end infinite;
+    }
+
+    /* Text selection */
+    ::selection {
+      background-color: rgba(0, 255, 136, 0.2);
+      color: #F8FAFC;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0A0E17; }
+    ::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #00FF88; }
+
+    /* Logo glow */
+    .logo-glow {
+      filter: drop-shadow(0 0 12px rgba(0, 255, 136, 0.4)) drop-shadow(0 0 40px rgba(0, 255, 136, 0.2)) drop-shadow(0 0 80px rgba(0, 255, 136, 0.1));
+      transition: filter 0.4s ease;
+    }
+    .logo-glow:hover {
+      filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.6)) drop-shadow(0 0 60px rgba(0, 255, 136, 0.3)) drop-shadow(0 0 100px rgba(0, 255, 136, 0.15));
+    }
+
+    /* Fade in on scroll */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="tactical-grid text-text-primary font-sans antialiased">
+
+  <!-- ============================================ -->
+  <!-- CLASSIFICATION BANNER                        -->
+  <!-- ============================================ -->
+  <div class="fixed top-0 left-0 right-0 z-50 bg-signal-green text-midnight text-center font-mono font-bold text-[11px] tracking-[0.2em] uppercase py-1.5 select-none">
+    // AIRGAPPED INTELLIGENCE //
+  </div>
+
+  <!-- ============================================ -->
+  <!-- HERO                                         -->
+  <!-- ============================================ -->
+  <section class="relative min-h-screen flex flex-col justify-center items-center px-6 pt-10 pb-16 overflow-hidden radar-sweep">
+    <!-- Wordmark -->
+    <div class="absolute top-12 left-6 md:left-12 lg:left-16 z-10">
+      <a href="/" class="flex items-center gap-3 no-underline">
+        <img src="logoNW.png" alt="nightwind" class="h-8 w-auto">
+        <span class="font-mono font-bold text-xl text-text-primary">nightwind<span class="text-signal-green ai-blink">.</span><span class="text-signal-green">ai</span></span>
+      </a>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto text-center">
+      <div class="mb-6">
+        <img src="logoNW.png" alt="nightwind" class="h-24 md:h-32 lg:h-40 w-auto mx-auto logo-glow">
+      </div>
+
+      <h1 class="font-bold text-4xl md:text-5xl lg:text-6xl text-text-primary leading-tight tracking-tight">
+        Airgapped AI<br>document intelligence.
+      </h1>
+
+      <p class="mt-6 text-lg md:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
+        Query decades of unstructured intelligence archives using natural language.
+        Deployed on-premise. No cloud dependency. Fully sovereign.
+      </p>
+
+      <p class="mt-8 font-mono text-sm md:text-base text-signal-green">
+        &gt; Built for defence, intelligence, and national security organisations.
+      </p>
+
+      <div class="mt-12">
+        <a href="#contact" class="inline-block font-mono font-medium text-sm tracking-wide text-midnight bg-signal-green px-8 py-3.5 hover:bg-[#00e07a] transition-colors duration-200">
+          REQUEST A BRIEFING
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+      <div class="w-px h-12 bg-gradient-to-b from-transparent to-signal-green opacity-40"></div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- THE PROBLEM                                  -->
+  <!-- ============================================ -->
+  <section class="py-20 md:py-28 lg:py-32 px-6 md:px-12 lg:px-16">
+    <div class="max-w-5xl mx-auto fade-up">
+      <p class="font-mono font-medium text-xs tracking-[0.15em] uppercase text-signal-green mb-4">The Problem</p>
+      <h2 class="font-bold text-3xl md:text-4xl text-text-primary leading-tight mb-16">
+        Your analysts spend more time searching than analysing.
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+        <div>
+          <p class="font-mono font-bold text-sm text-signal-green mb-3">[LEGACY DATA]</p>
+          <p class="text-text-secondary leading-relaxed">
+            Terabytes of intelligence reports, field assessments, and policy documents accumulated over decades — locked in formats that resist modern search.
+          </p>
+        </div>
+        <div>
+          <p class="font-mono font-bold text-sm text-signal-green mb-3">[INEFFICIENCY]</p>
+          <p class="text-text-secondary leading-relaxed">
+            60–70% of analyst time consumed by manual document retrieval. Knowledge that should take seconds to surface takes hours or days.
+          </p>
+        </div>
+        <div>
+          <p class="font-mono font-bold text-sm text-signal-green mb-3">[VENDOR DEPENDENCY]</p>
+          <p class="text-text-secondary leading-relaxed">
+            Existing solutions require cloud connectivity and create foreign vendor lock-in — incompatible with sovereign operations and national security requirements.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- THE PLATFORM / CAPABILITIES                  -->
+  <!-- ============================================ -->
+  <section class="py-20 md:py-28 lg:py-32 px-6 md:px-12 lg:px-16 bg-dark-steel/50">
+    <div class="max-w-5xl mx-auto fade-up">
+      <p class="font-mono font-medium text-xs tracking-[0.15em] uppercase text-signal-green mb-4">The Platform</p>
+      <h2 class="font-bold text-3xl md:text-4xl text-text-primary leading-tight mb-16">
+        Ask questions. Get cited answers. Stay airgapped.
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <!-- Card 01 -->
+        <div class="bg-dark-steel border border-slate-border border-t-2 border-t-signal-green p-8 hover:border-signal-green/40 transition-colors duration-200">
+          <p class="font-mono font-bold text-sm text-signal-green mb-3">[01] ASK IN ANY LANGUAGE</p>
+          <p class="text-text-secondary leading-relaxed">
+            Your analysts ask questions the way they think — in English, Arabic, French, or any language they work in. The platform searches your entire document archive and returns cited, sourced answers in seconds.
+          </p>
+        </div>
+        <!-- Card 02 -->
+        <div class="bg-dark-steel border border-slate-border border-t-2 border-t-signal-green p-8 hover:border-signal-green/40 transition-colors duration-200">
+          <p class="font-mono font-bold text-sm text-signal-green mb-3">[02] AIRGAPPED BY DESIGN</p>
+          <p class="text-text-secondary leading-relaxed">
+            Deployed entirely on-premise, behind your air gap. No cloud connectivity. No data leaves your infrastructure. Complete security control from day one.
+          </p>
+        </div>
+        <!-- Card 03 -->
+        <div class="bg-dark-steel border border-slate-border border-t-2 border-t-signal-green p-8 hover:border-signal-green/40 transition-colors duration-200">
+          <p class="font-mono font-bold text-sm text-signal-green mb-3">[03] MODEL FLEXIBLE</p>
+          <p class="text-text-secondary leading-relaxed">
+            Works with open-source and proprietary AI models. Choose the models that meet your security and performance requirements. No single-vendor dependency.
+          </p>
+        </div>
+        <!-- Card 04 -->
+        <div class="bg-dark-steel border border-slate-border border-t-2 border-t-signal-green p-8 hover:border-signal-green/40 transition-colors duration-200">
+          <p class="font-mono font-bold text-sm text-signal-green mb-3">[04] READS ANY DOCUMENT</p>
+          <p class="text-text-secondary leading-relaxed">
+            PDFs, scanned pages, Word files, spreadsheets, handwritten notes — decades-old archives in any format are searchable from day one. Multi-language support included.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- POSITIONING / DIFFERENTIATION                -->
+  <!-- ============================================ -->
+  <section class="py-20 md:py-28 lg:py-32 px-6 md:px-12 lg:px-16">
+    <div class="max-w-5xl mx-auto fade-up">
+      <p class="font-mono font-medium text-xs tracking-[0.15em] uppercase text-signal-green mb-4">Positioning</p>
+      <h2 class="font-bold text-3xl md:text-4xl text-text-primary leading-tight mb-4">
+        Sovereign AI. Airgapped by design.
+      </h2>
+      <p class="text-lg text-text-secondary max-w-2xl mb-16">
+        Purpose-built for organisations that cannot send data to the cloud and require full operational independence.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+        <div>
+          <p class="font-mono font-bold text-xl text-signal-green mb-3">ZERO CLOUD</p>
+          <p class="text-text-secondary leading-relaxed">
+            Not "cloud-optional." Not "hybrid." Airgapped from day one. Your data never leaves your infrastructure. Ever.
+          </p>
+        </div>
+        <div>
+          <p class="font-mono font-bold text-xl text-signal-green mb-3">NO LOCK-IN</p>
+          <p class="text-text-secondary leading-relaxed">
+            Compatible with open-source and proprietary models. Open standards. Switch or modify at will. Your data, your models, your sovereignty.
+          </p>
+        </div>
+        <div>
+          <p class="font-mono font-bold text-xl text-signal-green mb-3">FULL AUDIT TRAIL</p>
+          <p class="text-text-secondary leading-relaxed">
+            Every query logged. Every answer traceable to source documents. Complete accountability built into the platform from the ground up.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- USE CASES / OPERATIONAL CONTEXT              -->
+  <!-- ============================================ -->
+  <section class="py-20 md:py-28 lg:py-32 px-6 md:px-12 lg:px-16">
+    <div class="max-w-5xl mx-auto fade-up">
+      <p class="font-mono font-medium text-xs tracking-[0.15em] uppercase text-signal-green mb-4">Operational Context</p>
+      <h2 class="font-bold text-3xl md:text-4xl text-text-primary leading-tight mb-16">
+        Built for your operating environment.
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+        <div>
+          <p class="font-mono font-bold text-sm text-text-primary mb-4">DEFENCE INTELLIGENCE ANALYSIS</p>
+          <p class="font-mono text-sm text-signal-green italic leading-relaxed mb-4">
+            "What did allied assessments conclude about [threat actor] supply chain dependencies between 2015–2024?"
+          </p>
+          <p class="text-text-secondary text-sm leading-relaxed">
+            Surface cross-referenced intelligence from decades of archived reports in seconds. Full citation chain. Analyst-verifiable sources.
+          </p>
+        </div>
+        <div>
+          <p class="font-mono font-bold text-sm text-text-primary mb-4">DEFENCE PROCUREMENT</p>
+          <p class="font-mono text-sm text-signal-green italic leading-relaxed mb-4">
+            "Which evaluation reports reference performance issues with [equipment type] in theatre conditions?"
+          </p>
+          <p class="text-text-secondary text-sm leading-relaxed">
+            Query decades of technical evaluations, field reports, and after-action reviews without manual document retrieval.
+          </p>
+        </div>
+        <div>
+          <p class="font-mono font-bold text-sm text-text-primary mb-4">NATIONAL SECURITY POLICY</p>
+          <p class="font-mono text-sm text-signal-green italic leading-relaxed mb-4">
+            "How have threat assessments for [region] evolved across the last three strategic defence reviews?"
+          </p>
+          <p class="text-text-secondary text-sm leading-relaxed">
+            Synthesise temporal patterns across policy documents, intelligence summaries, and ministerial briefings.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CONTACT                                      -->
+  <!-- ============================================ -->
+  <section id="contact" class="py-20 md:py-28 lg:py-32 px-6 md:px-12 lg:px-16">
+    <div class="max-w-5xl mx-auto fade-up text-center">
+      <p class="font-mono font-medium text-xs tracking-[0.15em] uppercase text-signal-green mb-4">Contact</p>
+      <h2 class="font-bold text-3xl md:text-4xl text-text-primary leading-tight">
+        Briefings available soon.
+      </h2>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FOOTER                                       -->
+  <!-- ============================================ -->
+  <footer class="border-t border-slate-border py-12 px-6 md:px-12 lg:px-16">
+    <div class="max-w-5xl mx-auto text-center">
+      <p class="font-mono font-bold text-lg text-text-primary mb-2">
+        nightwind<span class="text-signal-green ai-blink">.</span><span class="text-signal-green">ai</span>
+      </p>
+      <p class="text-sm text-text-muted mb-6">
+        Airgapped AI document intelligence. Sovereign technology.
+      </p>
+      <p class="text-xs text-text-muted">
+        &copy; 2026 nightwind.ai. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============================================ -->
+  <!-- SCROLL ANIMATION                             -->
+  <!-- ============================================ -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
