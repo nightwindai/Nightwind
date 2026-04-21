@@ -1,0 +1,4 @@
+Contact: https://nightwind.ai
+Canonical: https://nightwind.ai/.well-known/security.txt
+Preferred-Languages: en, fr, de, es, ar, zh, ru, pt, ja, ko, hi, tr, pl, nl, sv
+Expires: 2027-04-21T00:00:00Z

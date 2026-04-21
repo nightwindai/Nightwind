@@ -1,2 +1,5 @@
 User-agent: *
 Allow: /
+
+# AI crawlers: see /llms.txt for structured programme information
+Sitemap: https://nightwind.ai/sitemap.xml

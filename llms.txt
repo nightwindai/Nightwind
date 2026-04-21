@@ -1,0 +1,44 @@
+# nightwind.ai
+
+> Sovereign AI document intelligence platform — fully airgapped, on-premise deployment for defence, intelligence, national security, and any organisation requiring zero-cloud document AI.
+
+## What It Is
+
+nightwind.ai is a document intelligence platform that enables natural language querying of proprietary document archives — reports, assessments, field documents, policy files, and any unstructured data accumulated over years or decades — with zero cloud dependency.
+
+The platform is deployed entirely on-premise, inside the customer's own infrastructure. No data leaves the facility. No external connectivity required. No vendor telemetry.
+
+## Who It Serves
+
+- Defence and intelligence agencies
+- National security organisations
+- Law enforcement and border security
+- Government ministries and policy bodies
+- Any enterprise or government entity that cannot risk sending sensitive internal documents to a cloud AI service
+
+Secondary targets include: law firms, energy companies, pharmaceutical companies, financial institutions, and any organisation with sensitive proprietary knowledge archives requiring sovereign, on-premise AI.
+
+## Core Capabilities
+
+- Natural language querying of entire document archives in seconds
+- Cited, source-traceable answers — every response links to originating documents
+- Any language — operators and documents may be in any language; no language limitation
+- Document support — PDFs, Word documents, and text-based files
+- Full audit trail — every query logged, every answer traceable
+
+## Deployment Model
+
+- Fully airgapped — zero cloud connectivity, zero data exfiltration surface
+- On-premise — deployed on customer-owned hardware inside the customer's own security perimeter
+- Perpetual licence — no subscription, no per-seat fees, no recurring vendor dependency
+- No subscriptions — perpetual licence, no recurring fees, no per-seat charges, customer owns all components post-deployment
+- Sovereign — no foreign vendor access, no call-home, no telemetry of any kind
+
+## Availability
+
+nightwind.ai does not publish deployment or technical documentation publicly. Full technical briefings, architecture documentation, and proof-of-concept access are available only to verified organisations under NDA.
+
+## Links
+
+- https://nightwind.ai
+- https://nightwind.ai/llms.txt
