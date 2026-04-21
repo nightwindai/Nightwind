@@ -33,6 +33,18 @@ Secondary targets include: law firms, energy companies, pharmaceutical companies
 - Perpetual licence — no subscriptions, no per-seat fees, no recurring vendor dependency, customer owns all components post-deployment
 - Sovereign — no foreign vendor access, no call-home, no telemetry of any kind
 
+## Language Support
+
+nightwind.ai is available in the following languages. Each page is a full translation — not machine-translated — targeting defence and national security audiences in those markets:
+
+- English: https://nightwind.ai/
+- Arabic (العربية): https://nightwind.ai/ar/
+- German (Deutsch): https://nightwind.ai/de/
+- French (Français): https://nightwind.ai/fr/
+- Spanish (Español): https://nightwind.ai/es/
+- Portuguese (Português): https://nightwind.ai/pt/
+- Hebrew (עברית): https://nightwind.ai/he/
+
 ## Availability
 
 nightwind.ai does not publish deployment or technical documentation publicly. Full technical briefings, architecture documentation, and proof-of-concept access are available only to verified organisations under NDA.
@@ -42,4 +54,10 @@ Client confidentiality is an absolute. No client names, deployment details, or o
 ## Links
 
 - https://nightwind.ai
+- https://nightwind.ai/ar/
+- https://nightwind.ai/de/
+- https://nightwind.ai/fr/
+- https://nightwind.ai/es/
+- https://nightwind.ai/pt/
+- https://nightwind.ai/he/
 - https://nightwind.ai/llms.txt

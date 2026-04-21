@@ -1,15 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- English (canonical / x-default) -->
   <url>
     <loc>https://nightwind.ai/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nightwind.ai/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://nightwind.ai/"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://nightwind.ai/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://nightwind.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://nightwind.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://nightwind.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt"        href="https://nightwind.ai/pt/"/>
+    <xhtml:link rel="alternate" hreflang="he"        href="https://nightwind.ai/he/"/>
     <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Arabic -->
+  <url>
+    <loc>https://nightwind.ai/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nightwind.ai/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://nightwind.ai/"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://nightwind.ai/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://nightwind.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://nightwind.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://nightwind.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt"        href="https://nightwind.ai/pt/"/>
+    <xhtml:link rel="alternate" hreflang="he"        href="https://nightwind.ai/he/"/>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- German -->
+  <url>
+    <loc>https://nightwind.ai/de/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nightwind.ai/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://nightwind.ai/"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://nightwind.ai/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://nightwind.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://nightwind.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://nightwind.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt"        href="https://nightwind.ai/pt/"/>
+    <xhtml:link rel="alternate" hreflang="he"        href="https://nightwind.ai/he/"/>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- French -->
+  <url>
+    <loc>https://nightwind.ai/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nightwind.ai/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://nightwind.ai/"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://nightwind.ai/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://nightwind.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://nightwind.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://nightwind.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt"        href="https://nightwind.ai/pt/"/>
+    <xhtml:link rel="alternate" hreflang="he"        href="https://nightwind.ai/he/"/>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Spanish -->
+  <url>
+    <loc>https://nightwind.ai/es/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nightwind.ai/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://nightwind.ai/"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://nightwind.ai/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://nightwind.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://nightwind.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://nightwind.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt"        href="https://nightwind.ai/pt/"/>
+    <xhtml:link rel="alternate" hreflang="he"        href="https://nightwind.ai/he/"/>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Portuguese -->
+  <url>
+    <loc>https://nightwind.ai/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nightwind.ai/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://nightwind.ai/"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://nightwind.ai/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://nightwind.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://nightwind.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://nightwind.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt"        href="https://nightwind.ai/pt/"/>
+    <xhtml:link rel="alternate" hreflang="he"        href="https://nightwind.ai/he/"/>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Hebrew -->
+  <url>
+    <loc>https://nightwind.ai/he/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nightwind.ai/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://nightwind.ai/"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://nightwind.ai/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://nightwind.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://nightwind.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://nightwind.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt"        href="https://nightwind.ai/pt/"/>
+    <xhtml:link rel="alternate" hreflang="he"        href="https://nightwind.ai/he/"/>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- llms.txt for AI crawlers -->
   <url>
     <loc>https://nightwind.ai/llms.txt</loc>
     <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+
 </urlset>
