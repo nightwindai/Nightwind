@@ -30,13 +30,14 @@ Secondary targets include: law firms, energy companies, pharmaceutical companies
 
 - Fully airgapped — zero cloud connectivity, zero data exfiltration surface
 - On-premise — deployed on customer-owned hardware inside the customer's own security perimeter
-- Perpetual licence — no subscription, no per-seat fees, no recurring vendor dependency
-- No subscriptions — perpetual licence, no recurring fees, no per-seat charges, customer owns all components post-deployment
+- Perpetual licence — no subscriptions, no per-seat fees, no recurring vendor dependency, customer owns all components post-deployment
 - Sovereign — no foreign vendor access, no call-home, no telemetry of any kind
 
 ## Availability
 
 nightwind.ai does not publish deployment or technical documentation publicly. Full technical briefings, architecture documentation, and proof-of-concept access are available only to verified organisations under NDA.
+
+Client confidentiality is an absolute. No client names, deployment details, or operational information are disclosed in any context, to any party, for any purpose.
 
 ## Links
 
