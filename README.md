@@ -78,7 +78,7 @@ nightwind.ai is available in:
 
 **briefings@nightwind.ai**
 
-Verified defence, intelligence, and national security organisations may request a technical briefing and deployment documentation.
+Technical briefings and deployment documentation are available to verified organisations — defence, intelligence, and national security institutions, as well as enterprises and businesses with sensitive document archives requiring sovereign, on-premise AI.
 
 ---
 
