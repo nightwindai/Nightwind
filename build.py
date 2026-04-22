@@ -112,7 +112,7 @@ LANGS = {
     'HERO_SUBTEXT': 'استعلم عن عقود من أرشيفات الاستخبارات غير المنظمة باللغة الطبيعية. نشر محلي. لا اعتماد على السحابة. سيادة كاملة.',
     'HERO_TAGLINE': 'مُصمَّم للدفاع والاستخبارات ومنظمات الأمن القومي.',
     'HERO_CTA': 'طلب إحاطة',
-    'LOCAL_NAME': '<p class="font-mono text-xs text-signal-green/70 mt-1.5 tracking-widest" dir="rtl">ريح الليل</p>',
+    'LOCAL_NAME': '<p class="font-mono font-bold text-xl text-text-primary mt-1" dir="rtl">ريح الليل <span class="text-signal-green">AI</span></p>',
     'PROBLEM_LABEL': 'المشكلة',
     'PROBLEM_H2': 'يقضي محلّلوكم وقتاً أطول في البحث من التحليل.',
     'PROBLEM_C1_LABEL': '[البيانات القديمة]',
