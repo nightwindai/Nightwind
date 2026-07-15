@@ -44,6 +44,7 @@ nightwind.ai is available in the following languages. Each page is a full transl
 - Spanish (Español): https://nightwind.ai/es/
 - Portuguese (Português): https://nightwind.ai/pt/
 - Hebrew (עברית): https://nightwind.ai/he/
+- Serbian (Srpski): https://nightwind.ai/sr/
 
 ## Availability
 

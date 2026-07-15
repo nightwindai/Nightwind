@@ -71,6 +71,7 @@ nightwind.ai is available in:
 | Spanish — Español | https://nightwind.ai/es/ |
 | Portuguese — Português | https://nightwind.ai/pt/ |
 | Hebrew — עברית | https://nightwind.ai/he/ |
+| Serbian — Srpski | https://nightwind.ai/sr/ |
 
 ---
 
@@ -88,7 +89,7 @@ This repository contains the public web presence for nightwind.ai. The site is a
 
 Key files:
 - `index.html` — English landing page
-- `ar/`, `de/`, `fr/`, `es/`, `pt/`, `he/` — localised language pages
+- `ar/`, `de/`, `fr/`, `es/`, `pt/`, `he/`, `sr/` — localised language pages
 - `template.html` — i18n source template
 - `build.py` — translation build script; generates all language pages from `template.html`
 - `sitemap.xml` — full multilingual sitemap with hreflang annotations
